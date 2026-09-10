@@ -12,8 +12,8 @@ def calculate_total(
 
     # TODO: apply your assigned feature's pricing rule here, gated behind
     # its argument (apply_discount, apply_tax, or apply_shipping)
-    total = subtotal + (subtotal*0.08) # Example: applying 8% tax
-    apply_tax = True
+    if apply_tax:
+        total += total * 0.08
     return total
 
 
